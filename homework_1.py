@@ -28,12 +28,12 @@ max_number(13.2, 13.3, 15)
 # Если флаг действителен - возвращаем новый список с нечетными числами из входного списка, если флаг отрицателен - возвращаем новый список с четными числами из входного списка.
 
 a = [3, 4, 77, 89, 6, 20]
-b = False
+b = True
 
 def even_odd_nmbrs(a, b):
     even_lst = []
     odd_lst = []
-    if b == True:
+    if b:
         for number in a:
             if number % 2 != 0:
                even_lst.append(number)
@@ -50,12 +50,7 @@ print(even_odd_nmbrs(a, b))
 # И возвращает оба.
 
 def min_max_nmbrs(*args):
-    lst = []
-    for i in args:
-        lst.append(i)
-    return print(f'минимальное число - {min(lst)}, максимальное число - {max(lst)}')
-
-min_max_nmbrs(5, 6, 7, 8, 18, 1, 0.5)
+    return min(args), max(args)
 
 # 5 - Написать функцию, которая принимает два аргумента: строка и булевый флаг case по-умолчанию равный True. 
 # Если флаг действителен: возвращаем новую строку, где каждый символ входной приведен к верхнему регистру, иначе - к нижнему.
@@ -76,7 +71,7 @@ print(upperLowerCase('Hello World', b=False))
 def str_glue(*args, glue = ':'):
     lst = []
     for i in args:
-        if i > i[0:3]:
+        if len(i) > 3:
             lst.append(i)
     return glue.join(lst)
 
