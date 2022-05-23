@@ -16,11 +16,11 @@ print(math_operation(10, -10))
 # 2 - Написать функцию, которая принимает 3 аргумента - числа, найти среди них два максимальных, вывести в консоль.
 
 def max_number(a, b, c):
-    x = []
+    lst = []
     for i in a, b, c:
-        x.append(i)
-    x.remove(min(x)) 
-    print(x)
+        lst.append(i)
+    lst.remove(min(lst)) 
+    print(lst)
 
 max_number(13.2, 13.3, 15)
 
@@ -50,10 +50,10 @@ print(even_odd_nmbrs(a, b))
 # И возвращает оба.
 
 def min_max_nmbrs(*args):
-    x = []
+    lst = []
     for i in args:
-        x.append(i)
-    return print(f'минимальное число - {min(x)}, максимальное число - {max(x)}')
+        lst.append(i)
+    return print(f'минимальное число - {min(lst)}, максимальное число - {max(lst)}')
 
 min_max_nmbrs(5, 6, 7, 8, 18, 1, 0.5)
 
@@ -74,10 +74,10 @@ print(upperLowerCase('Hello World', b=False))
 # Для соединения между любых двух строк вставлять glue.
 
 def str_glue(*args, glue = ':'):
-    a = []
+    lst = []
     for i in args:
         if i > i[0:3]:
-            a.append(i)
-    return glue.join(a)
+            lst.append(i)
+    return glue.join(lst)
 
 print(str_glue('Москва', 'Рим', 'Осло', 'Барселона', 'Ош', 'Ташкент', 'Будапешт'))
